@@ -12,7 +12,6 @@ class Login extends Component{
 	}
 	
 	handleLogin=()=>{
-		this.setState({'message':true});
 		const data = {'username':this.state.username, 'password':this.state.password}
 		axios.post('http://127.0.0.1:8000/login/', data)
 		.then((res)=>{
@@ -22,7 +21,7 @@ class Login extends Component{
 				localStorage.setItem('user', res.data.user);		
 				this.props.chechUserAuth(res.data.user);
 		}).catch((err)=>{
-			console.log(err);
+			alert('Something is wrong.')
 		});
 	}
 	render(){

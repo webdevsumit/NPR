@@ -25,7 +25,9 @@ SECRET_KEY = '0ynkj+p*%vz@6n6fp-5zo6nne+sxm=47(u(i$%x!co7jg=s@(i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -74,9 +76,8 @@ ROOT_URLCONF = 'NPR.urls'
 CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ORIGIN_WHITELIST = (
-    'http://127.0.0.1:3000',
+    'htts://127.0.0.1:3000',
 )
-
 
 
 
